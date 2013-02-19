@@ -373,6 +373,71 @@ section {
     max-width: 100%;
 }
 
+/* Admin Type Pages */
+.tabtree {
+    position: relative;
+}
+.tabrow0 {
+    list-style: none outside none;
+    text-align: center;
+}
+.tabrow0 ul {
+    list-style: none outside none;
+}
+.tabrow0 ul li {
+    border-right: 1px solid #000;
+    display: inline;
+    padding: 0 0.5em;
+}
+.tabrow0 ul li.last {
+    border: none;
+}
+#adminsettings div.form-item {
+    clear: both;
+    margin: 1em 0;
+}
+#adminsettings div.form-item .form-label {
+    display: block;
+    float: left;
+    text-align: right;
+    width: 17%;
+}
+#adminsettings .form-shortname {
+    display: block;
+}
+#adminsettings .form-setting,
+#adminsettings .form-description {
+    display: block;
+    margin-left: 18%;
+}
+#adminsettings .form-shortname,
+#adminsettings .form-defaultinfo {
+    color: #777;
+    font-size: 90%;
+}
+#adminsettings .defaultsnext,
+#adminsettings .form-defaultinfo {
+    display: inline;
+    margin-right: 0.5em;
+}
+.mform fieldset {
+    border: 1px solid #DDD;
+    padding: 10px 0;
+}
+.mform fieldset legend {
+    font-weight: bold;
+    margin-left: 0.5em;
+}
+.mform fieldset .advancedbutton {
+    text-align: right;
+}
+.mform fieldset .felement {
+    border: none;
+    padding: 0;
+}
+span.hide,
+div.hide {display: none;}
+
 /* Footer */
 
 footer {
