@@ -324,6 +324,9 @@ article.themecolumn tr.separator td {
 }
 section {
 }
+.mform .fpassword .unmask {
+    display: inline;
+}
 .mform .fitemtitle,
 .mform div.felement,
 .mform fieldset.felement {
@@ -334,6 +337,9 @@ section {
 .mform .fitemtitle {
     text-align: right;
     width: 30%;
+}
+.mform div.fitem {
+    clear: both;
 }
 .mform div.felement,
 .mform fieldset.felement {
