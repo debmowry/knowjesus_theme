@@ -346,8 +346,25 @@ section {
     padding: 25px 0 20px;
     width: 80%;
 }
+.loginbox {
+    margin-bottom: 1em;
+}
+.loginbox h2 {
+    font-size: 1.2em;
+    text-align: center;
+}
+.loginpanel {
+    text-align: center;
+}
+.loginpanel .desc {
+    margin-bottom: 0.5em;
+}
+.loginpanel .clearer {
+    margin-bottom: 0.5em;
+}
 .forgotsub,
 .signupform {
+    margin-top: 1em;
     text-align: center;
 }
 
@@ -392,6 +409,9 @@ section {
 .tabrow0 ul li.last {
     border: none;
 }
+#admin-lang td#middle-column form td {
+    padding: 10px;
+}
 #adminsettings div.form-item {
     clear: both;
     margin: 1em 0;
@@ -411,7 +431,8 @@ section {
     margin-left: 18%;
 }
 #adminsettings .form-shortname,
-#adminsettings .form-defaultinfo {
+#adminsettings .form-defaultinfo,
+.strkey {
     color: #777;
     font-size: 90%;
 }
@@ -682,12 +703,37 @@ footer nav ul li {
     }
 }
 @media only screen and (min-width: 520px) {
+    .loginpanel,
+    .signuppanel {
+        width: 49%;
+    }
+    .loginpanel {
+        float: left;
+    }
+    .signuppanel {
+        float: right;
+    }
     footer nav ul li {
         display: inline;
         padding-right: 1em;
     }
     footer nav ul li:last-child {
         padding-right: 0;
+    }
+}
+@media only screen and (min-width: 640px) {
+    .loginform .form-label {
+        float: left;
+        width: 41%;
+        text-align: right;
+    }
+    .loginform .form-input {
+        float: right;
+        width: 58%;
+        text-align: left;
+    }
+    .loginform .clearer {
+        clear: both;
     }
 }
 @media only screen and (min-width: 30em) and (max-width: 599px) {
@@ -714,6 +760,9 @@ footer nav ul li {
         float: right;
         padding-right: 1em;
         width: 29%;
+    }
+    .loginbox h2 {
+        font-size: 110%;
     }
 }
 
