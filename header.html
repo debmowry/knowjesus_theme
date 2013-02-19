@@ -1,0 +1,42 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <?php $moodletitle = ($home == true) ? "KnowJesus" : substr($title, 0, 60); ?>
+    <title><?php echo $moodletitle; ?></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1">
+    <link rel="shortcut icon" href="<?php echo $CFG->wwwroot; ?>/favicon.ico">
+    <link rel="apple-touch-icon" href="<?php echo $CFG->wwwroot; ?>/apple-touch-icon.png">
+    <link rel="stylesheet" href="<?php echo $CFG->themewww; ?>/knowjesus-en/css/normalize.css">
+    <link rel="stylesheet" href="<?php echo $CFG->themewww; ?>/knowjesus-en/css/main.css">
+    <script src="<?php echo $CFG->themewww; ?>/js/vendor/modernizr-2.6.1.min.js"></script>
+    <?php include("$CFG->javascript"); ?>
+</head>
+<body<?php
+    echo " $bodytags";
+    if ($focus) {
+        echo " onload=\"setfocus()\"";
+    }
+?>>
+    <div class="page">
+        <header>
+            <?php if ($home == true): ?>
+                <h1><span class="homelogo">KnowJesus.net</span></h1>
+            <?php else: ?>
+                <h1><a href="<?php echo $CFG->wwwroot; ?>" title="Return to the home page">Know Jesus.net</a></h1>
+            <?php endif; ?>
+            <p><span class="visuallyhidden">"Now this eternal life: that they know you, the only true God, and Jesus Christ, whom you have sent." <span class="headerverse">John 17:3</span></span></p>
+        </header>
+        <div class="headermenu">
+            <div class="breadcrumb">
+                <?php print_navigation($navigation); ?>
+            </div>
+            <?php echo user_login_string(); ?>
+        </div>
+        <?php print_container_start(true, '', 'content'); ?>
+        <section class="editbutton clearfix"><?php echo $button; ?></section>
