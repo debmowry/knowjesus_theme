@@ -346,6 +346,10 @@ section {
     padding: 25px 0 20px;
     width: 80%;
 }
+.forgotsub,
+.signupform {
+    text-align: center;
+}
 
 /* Book components */
 .mod-book .themecolumn .verse,
@@ -554,6 +558,23 @@ footer nav ul li {
 
 @media only screen and (max-width: 519px) {
     body { font-size: 105%; }
+    .loginbox {margin: 0 1em;}
+    .signuppanel {
+        margin: 2em 0 1em;
+    }
+    .loginpanel h2,
+    .signuppanel h2 {
+        font-size: 115%;
+        text-align: center;
+    }
+    .loginbox input {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .loginbox input#username,
+    .loginbox input#password {
+        width: 95%;
+    }
     footer nav { padding: 0; }
     footer nav ul li {
         border-top: 1px solid #9a9a9a;
