@@ -750,6 +750,9 @@ footer nav ul li {
         padding: 0 0.5em;
         width: 30%;
     }
+    .bookcontainer section img {
+        display: none;
+    }
     .right-sideblock img {display: none;}
 }
 @media only screen and (min-width: 600px) and (max-width: 899px) {
