@@ -395,6 +395,34 @@ section {
     margin: 0 auto;
     max-width: 100%;
 }
+div.footer div {
+    float: left;
+    margin-bottom: 1em;
+}
+.print a {
+    background: #fbfbfb;
+    background: -moz-linear-gradient(top, #fbfbfb 0%, #e4e4e4 100%);
+    background: -o-linear-gradient(top, #fbfbfb 0%, #e4e4e4 100%);
+    background: -webkit-linear-gradient(top, #fbfbfb 0%, #e4e4e4 100%);
+    background: linear-gradient(top, #fbfbfb 0%, #e4e4e4 100%);
+    border: 1px solid #adadad;
+    border-radius: 6px;
+    color: #222222;
+    display: inline-block;
+    margin: 0 2px;
+    padding: 1px 5px;
+    text-decoration: none;
+}
+.biblesearchform input[type="submit"] {
+    background-color: #e2ecff;
+    background: -moz-linear-gradient(top, #fafbff 0%, #e2ecff 100%);
+    background: -webkit-linear-gradient(top, #fafbff 0%, #e2ecff 100%);
+    background: linear-gradient(top, #fafbff 0%, #e2ecff 100%);
+    border: 1px solid #a0aec8;
+    border-radius: 6px;
+    margin-left: 2px;
+    padding: 3px 5px 1px;
+}
 
 /* Admin Type Pages */
 .tabtree {
@@ -667,6 +695,24 @@ footer nav ul li {
     .loginbox input#password {
         width: 95%;
     }
+    .editbutton table {
+        float: none;
+        margin: 0 auto;
+    }
+    .bookcontainer section.right-sideblock img {
+        display: none;
+    }
+    .print a {
+        text-align: center;
+    }
+    .biblesearchform {
+        margin: 1em 0;
+        text-align: center;
+    }
+    .biblesearchform input {
+        margin: 0.2em 0;
+        width: 95%;
+    }
     footer nav { padding: 0; }
     footer nav ul li {
         border-top: 1px solid #9a9a9a;
@@ -678,7 +724,7 @@ footer nav ul li {
     }
     footer .mobilehidden { display: none; }
 }
-@media only screen and (min-width: 0) and (max-width: 599px) {
+@media only screen and (min-width: 0) and (max-width: 600px) {
     .page { margin: 0; padding-top: 0.5em; }
     header {
         background: #ffffff url(../pix/sitelogo/small_logo.png) no-repeat 0 0;
@@ -704,8 +750,25 @@ footer nav ul li {
     header p .visuallyhidden .headerverse {
         color: #f8d385;
     }
+    .headermenu {
+        display: block;
+        height: auto;
+    }
+    .breadcrumb,
+    .logininfo {
+        float: none;
+    }
     article {
         padding: 0 2%;
+    }
+    div.footer {
+        text-align: center;
+    }
+    div.footer div {
+        float: none;
+    }
+    .print a {
+        width: 44%;
     }
 }
 @media only screen and (min-width: 520px) {
@@ -742,7 +805,7 @@ footer nav ul li {
         clear: both;
     }
 }
-@media only screen and (min-width: 30em) and (max-width: 599px) {
+@media only screen and (min-width: 30em) and (max-width: 600px) {
     section.themecolumn,
     .bookcontainer .right-sideblock,
     .book_toc_none {
@@ -755,7 +818,7 @@ footer nav ul li {
     }
     .right-sideblock img {display: none;}
 }
-@media only screen and (min-width: 600px) and (max-width: 899px) {
+@media only screen and (min-width: 601px) and (max-width: 899px) {
     .page { margin: 0; }
     article,
     .book_chapter_title {
@@ -772,6 +835,15 @@ footer nav ul li {
     }
     .loginbox h2 {
         font-size: 110%;
+    }
+    div.footer {
+        text-align: center;
+    }
+    div.footer div {
+        float: none;
+    }
+    .print a {
+        width: 44%;
     }
 }
 
@@ -810,9 +882,14 @@ footer nav ul li {
     }
     .book_toc_none {
     }
-    #content .footer {
+    #content div.footer {
         clear: both;
-        margin-bottom: 1em;
+        text-align: center;
+    }
+    #content div.footer div {
+        float: left;
+        margin: 0 auto 1em;
+        width: 33%;
     }
 }
 
@@ -820,7 +897,7 @@ footer nav ul li {
     .page { margin: 0 4%; }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1150px) {
+@media only screen and (min-width: 601px) and (max-width: 1150px) {
     header {
         background: #ffffff url(../pix/sitelogo/medium_logo.png) no-repeat 0 0;
     }
