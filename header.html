@@ -40,9 +40,8 @@
             <div class="logininfo">
             <?php
                 if (isset($USER->username)) {
-                    $kjlogout = '<span class="hidemobile">You are logged in as '. $USER->firstname .' '. $USER->lastname .' (</span>';
+                    $kjlogout = '<span class="hidemobile">Hi, '. $USER->firstname .' | </span>';
                     $kjlogout .= '<a href="'. $CFG->wwwroot .'/login/logout.php?sesskey='. sesskey() .'">'. get_string('logout') .'</a>';
-                    $kjlogout .= '<span class="hidemobile">)</span>';
                     echo $kjlogout;
                 } else {
                     $kjlogin = '<span class="hidemobile">You are not logged in. (</span>';
