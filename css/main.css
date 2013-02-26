@@ -173,6 +173,8 @@ article h1 {
 }
 
 .bookcontainer h1 {
+    font-size: 1.3em;
+    font-weight: bold;
     margin-top: 0.5em;
     margin-bottom: 0;
 }
@@ -424,6 +426,13 @@ div.footer div {
     border-radius: 6px;
     margin-left: 2px;
     padding: 3px 5px 1px;
+}
+.mod-book .topnav a,
+.mod-book .nav a {
+    margin: 0 2px;
+}
+.mod-book .generateimscp .nav {
+    float: right;
 }
 
 /* Admin Type Pages */
@@ -895,7 +904,7 @@ footer nav ul li {
         width: 57%;
     }
     .bookcontainer h1 {
-        margin-right: 22%;
+        margin-left: 22%;
     }
     .left-sideblock {
         margin-left: -79%;
