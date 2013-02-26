@@ -41,12 +41,13 @@
             <?php
                 if (isset($USER->username)) {
                     $kjlogout = '<span class="hidemobile">You are logged in as '. $USER->firstname .' '. $USER->lastname .' (</span>';
-                    $kjlogout .= '<a href="http://'. $CFG->wwwroot .'/login/logout.php?sesskey='.$sesskey.'">Logout</a>';
+                    $kjlogout .= '<a href="'. $CFG->wwwroot .'/login/logout.php?sesskey='. sesskey() .'">'. get_string('logout') .'</a>';
                     $kjlogout .= '<span class="hidemobile">)</span>';
                     echo $kjlogout;
                 } else {
-                    $removetext = array("You are not logged in.", "(", ")");
-                    $kjlogin = str_replace($removetext, "", $menu);
+                    $kjlogin = '<span class="hidemobile">You are not logged in. (</span>';
+                    $kjlogin .= '<a href="'. $CFG->wwwroot .'/login/index.php">Login</a>';
+                    $kjlogin .= '<span class="hidemobile">)</span>';
                     echo $kjlogin;
                 }
             ?>
