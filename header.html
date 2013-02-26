@@ -36,7 +36,21 @@
             <div class="breadcrumb">
                 <?php print_navigation($navigation); ?>
             </div>
-            <?php echo user_login_string(); ?>
+            <!--<?php echo user_login_string(); ?>-->
+            <div class="logininfo">
+            <?php
+                if (isset($USER->username)) {
+                    $kjlogout = '<span class="hidemobile">You are logged in as '. $USER->firstname .' '. $USER->lastname .' (</span>';
+                    $kjlogout .= '<a href="http://'. $CFG->wwwroot .'/login/logout.php?sesskey='.$sesskey.'">Logout</a>';
+                    $kjlogout .= '<span class="hidemobile">)</span>';
+                    echo $kjlogout;
+                } else {
+                    $removetext = array("You are not logged in.", "(", ")");
+                    $kjlogin = str_replace($removetext, "", $menu);
+                    echo $kjlogin;
+                }
+            ?>
+            </div>
         </div>
         <?php print_container_start(true, '', 'content'); ?>
         <section class="editbutton clearfix"><?php echo $button; ?></section>
