@@ -389,6 +389,9 @@ section {
     padding: 0 1em 1em;
     text-align: right;
 }
+.mod-book .themecolumn .footnote {
+    font-size: 85%;
+}
 .mod-book .right-sideblock img {
     display: block;
     height: auto;
@@ -396,7 +399,6 @@ section {
     max-width: 100%;
 }
 div.footer div {
-    float: left;
     margin-bottom: 1em;
 }
 .print a {
@@ -454,7 +456,7 @@ div.footer div {
     display: block;
     float: left;
     text-align: right;
-    width: 17%;
+    width: 20%;
 }
 #adminsettings .form-shortname {
     display: block;
@@ -462,7 +464,7 @@ div.footer div {
 #adminsettings .form-setting,
 #adminsettings .form-description {
     display: block;
-    margin-left: 18%;
+    margin-left: 21%;
 }
 #adminsettings .form-shortname,
 #adminsettings .form-defaultinfo,
@@ -474,6 +476,9 @@ div.footer div {
 #adminsettings .form-defaultinfo {
     display: inline;
     margin-right: 0.5em;
+}
+#adminsettings .form-multicheckbox li {
+    list-style: none outside none;
 }
 .mform fieldset {
     border: 1px solid #DDD;
@@ -492,6 +497,10 @@ div.footer div {
 }
 span.hide,
 div.hide {display: none;}
+
+#layout-table #middle-column table {
+    margin: 20px auto;
+}
 
 /* Footer */
 
@@ -699,9 +708,6 @@ footer nav ul li {
         float: none;
         margin: 0 auto;
     }
-    .bookcontainer section.right-sideblock img {
-        display: none;
-    }
     .print a {
         text-align: center;
     }
@@ -756,10 +762,29 @@ footer nav ul li {
     }
     .breadcrumb,
     .logininfo {
+        display: inline-block;
         float: none;
+        width: 49%;
+    }
+    .logininfo {
+        text-align: right;
+    }
+    .breadcrumb li:not(:first-child),
+    .hidemobile {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
     }
     article {
         padding: 0 2%;
+    }
+    .bookcontainer section.right-sideblock img {
+        display: none;
     }
     div.footer {
         text-align: center;
@@ -882,11 +907,11 @@ footer nav ul li {
     }
     .book_toc_none {
     }
-    #content div.footer {
+    #mod-book-view #content div.footer {
         clear: both;
         text-align: center;
     }
-    #content div.footer div {
+    #mod-book-view #content div.footer div {
         float: left;
         margin: 0 auto 1em;
         width: 33%;
