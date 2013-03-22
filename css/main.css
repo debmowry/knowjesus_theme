@@ -283,6 +283,59 @@ nav.backnext {
     margin: 0.25em 0;
     text-align: right;
 }
+a.kjbutton,
+a.kjbutton-g {
+    border-radius: 4px;
+    color: #FFFFFF;
+    display: inline-block;
+    font-size: 110%;
+    font-weight: bold;
+    margin: 0.25em;
+    padding: 5px 10px;
+}
+a.kjbutton {
+    background: #296db1;
+    background: -moz-linear-gradient(top, #59b0d4 0%, #296db1 50%, #3598c4 100%);
+    background: -o-linear-gradient(top, #59b0d4 0%, #296db1 50%, #3598c4 100%);
+    background: -webkit-linear-gradient(top, #59b0d4 0%, #296db1 50%, #3598c4 100%);
+    background: linear-gradient(top, #59b0d4 0%, #296db1 50%, #3598c4 100%);
+}
+a.kjbutton-g {
+    background: #296db1;
+    background: -moz-linear-gradient(top, #929292 0%, #666666 50%, #6f6f6f 100%);
+    background: -o-linear-gradient(top, #929292 0%, #666666 50%, #6f6f6f 100%);
+    background: -webkit-linear-gradient(top, #929292 0%, #666666 50%, #6f6f6f 100%);
+    background: linear-gradient(top, #929292 0%, #666666 50%, #6f6f6f 100%);
+    border: 1px solid #a0a0a0;
+}
+a.kjbutton:hover,
+a.kjbutton-g:hover {
+    text-decoration: none;
+}
+
+p.signup {
+    background: #2165AC;
+    background: -moz-linear-gradient(top, #66BADB 0%, #2165AC 50%, #2165AC 60%, #5AB2D5 100%);
+    background: -o-linear-gradient(top, #66BADB 0%, #2165AC 50%, #2165AC 60%, #5AB2D5 100%);
+    background: -webkit-linear-gradient(top, #66BADB 0%, #2165AC 50%, #2165AC 60%, #5AB2D5 100%);
+    background: linear-gradient(top, #66BADB 0%, #2165AC 50%, #2165AC 60%, #5AB2D5 100%);
+    border-radius: 20px;
+    color: #FFFFFF;
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+a.signupbutton {
+    background-image: url(../pix/kj-signup-logo.png);
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    font-size: 1.2em;
+    padding-left: 40px;
+    text-decoration: none;
+    width: 100%;
+}
 
 /* Main Content Components */
 #content {
