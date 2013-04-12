@@ -1,18 +1,43 @@
         <?php print_container_end(); // content container ?>
-        <script type="text/javascript" src="http://knowjesus.net/files/loader5.js"></script>
         <footer>
             <div class="footerlogo"></div>
             <nav>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#"><img src="<?php echo $CFG->themewww; ?>/knowjesus-en/pix/bgeafooter.png" alt="Billy Graham Evangelistic Association web site." /></a></li>
+                    <li><a href="http://www.knowjesus.net/">Home</a></li>
+                    <li><a href="http://www.knowjesus.net/mod/resource/view.php?id=71">About</a></li>
+                    <li><a href="mailto:webteam@KnowJesus.net">Contact Us</a></li>
+                    <li><a href="http://www.billygraham.org"><img src="<?php echo $CFG->themewww; ?>/knowjesus-en/pix/bgeafooter.png" alt="Billy Graham Evangelistic Association web site." /></a></li>
                     <li class="mobilehidden">&amp;</li>
-                    <li><a href="#"><img src="<?php echo $CFG->themewww; ?>/knowjesus-en/pix/jesusnetfooter.png" alt="Jesus.net on facebook"></a></li>
+                    <li><a href="http://www.facebook.com/jesus.net"><img src="<?php echo $CFG->themewww; ?>/knowjesus-en/pix/jesusnetfooter.png" alt="Jesus.net on facebook"></a></li>
                 </ul>
             </nav>
+                <div id="printcopyright">Printed from www.KnowJesus.net, a ministry of the Billy Graham Evangelistic Association. © <?php echo date("Y"); ?> BGEA.</div>
         </footer>
     </div> <!-- end of .page -->
+    <script type="text/javascript" src="http://knowjesus.net/files/loader5.js"></script>
+    
+    <!-- Google Analytics code -->
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        
+        _gaq.push(['_setAccount', <?php echo "\"".$CFG->GAKey."\"" ?>]);
+        _gaq.push(['_setDomainName', 'knowjesus.net']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+        
+        (function() {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    <img src="http://worldvisitors.megaphone.org/visitor.php?s=35&r=123456789" width="0" height="0" alt="" >
+    <a title="Real Time Web Analytics" href="http://clicky.com/100579097"><img alt="Real Time Web Analytics" src="//static.getclicky.com/media/links/badge.gif" height="0" border="0" /></a>
+    <script src="//static.getclicky.com/js" type="text/javascript"></script>
+    <script type="text/javascript">try{ clicky.init(100579097); }catch(e){}</script>
+
 </body>
 </html>
