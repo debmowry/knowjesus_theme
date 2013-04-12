@@ -257,11 +257,19 @@ a:hover { text-decoration: underline; }
 .block_login .loginform div {
     padding-bottom: 1em;
 }
-.block_login .loginform div label {
-    padding-right: 0.5em;
+.block_login .loginform div label,
+.loginbox label {
+    display: block;
 }
-.block_login .loginform .btn {
+.block_login .loginform input,
+.loginbox input {
+    width: 100%;
+}
+.block_login .loginform .btn,
+.loginbox input#login {
+    margin: 0 auto;
     text-align: center;
+    width: 80%;
 }
 .block_login .footer {
     text-align: center;
@@ -423,10 +431,39 @@ section {
 .loginpanel .clearer {
     margin-bottom: 0.5em;
 }
+.loginpanel .form-label {
+    text-align: left;
+}
 .forgotsub,
 .signupform {
     margin-top: 1em;
     text-align: center;
+}
+.box { clear: both; }
+.clearer {
+    background: none;
+    border: medium none;
+    clear: both;
+    display: block;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+.unread {
+    background: #FFD991;
+}
+
+#course-index .buttons,
+#user-index .buttons,
+#user-view .buttons {
+    margin: 0.5em 0 1em 0;
+    text-align: center;
+}
+#user-view .buttons form,
+#user-view .buttons form div {
+    display: inline;
 }
 
 /* Book components */
@@ -446,6 +483,10 @@ section {
 }
 .mod-book .themecolumn .footnote {
     font-size: 85%;
+}
+.mod-book .themecolumn span {
+    color: blue;
+    cursor: help;
 }
 .mod-book .right-sideblock img {
     display: block;
@@ -492,21 +533,72 @@ div.footer div {
 .tabtree {
     position: relative;
 }
-.tabrow0 {
-    list-style: none outside none;
+.tabtree .tabrow0 a.nolink {
+    background: #FFFFFF;
+    color: #333333;
+    z-index: 102;
+}
+.tabrow0,
+.tabrow0 ul {
+    list-style: none inside none;
+    padding-bottom: 1em;
+    position: relative;
     text-align: center;
 }
-.tabrow0 ul {
-    list-style: none outside none;
-}
+.tabrow0 li,
 .tabrow0 ul li {
-    border-right: 1px solid #000;
     display: inline;
-    padding: 0 0.5em;
+    margin: 0 -4px 0 0;
 }
+.tabrow0 a {
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-top: 1px solid #999999;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 4px 8px;
+}
+.tabrow1 a {
+    border: none;
+}
+.tabrow0 li.last,
 .tabrow0 ul li.last {
     border: none;
 }
+.tabrow0 .empty {
+    height: 1px;
+    overflow: hidden;
+    padding: 0;
+}
+/* ul.tabrow0 div {
+    border-top: 1px solid #DDDDDD;
+    position: absolute;
+    top: 1.5em;
+    width: 90%;
+} */
+/* from standard theme */
+.tabrow0 div,
+.tabrow0 ul {
+    border-top: 1px solid #AAAAAA;
+    font-size: 90%;
+    left: 0;
+    line-height: 75%;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0.5em 0;
+    position: absolute;
+    top: 1.7em;
+    width: 100%;
+}
+/* end standard theme */
+#admin-lang .generalbox {
+    /* border-bottom: 1px solid #BBBBBB; */
+    border-top: 1px solid #BBBBBB;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+
 #admin-lang td#middle-column form td {
     padding: 10px;
 }
@@ -518,7 +610,7 @@ div.footer div {
     display: block;
     float: left;
     text-align: right;
-    width: 20%;
+    width: 33%;
 }
 #adminsettings .form-shortname {
     display: block;
@@ -526,18 +618,19 @@ div.footer div {
 #adminsettings .form-setting,
 #adminsettings .form-description {
     display: block;
-    margin-left: 21%;
+    margin-bottom: 1%;
+    margin-left: 35%;
 }
 #adminsettings .form-shortname,
 #adminsettings .form-defaultinfo,
 .strkey {
     color: #777;
-    font-size: 90%;
+    font-size: 85%;
 }
 #adminsettings .defaultsnext,
 #adminsettings .form-defaultinfo {
-    display: inline;
-    margin-right: 0.5em;
+    display: block;
+    padding-bottom: 0.25em;
 }
 #adminsettings .form-multicheckbox li {
     list-style: none outside none;
@@ -562,6 +655,20 @@ div.hide {display: none;}
 
 #layout-table #middle-column table {
     margin: 20px auto;
+}
+
+/*
+ * Dialogue
+ */
+
+#mod-dialogue-view .generaltable .cell {
+   background-color:#FEFFEF;
+}
+.generaltable tr {
+    border-bottom: 1px solid #DDDDDD;
+}
+.generaltable tr.lastrow {
+    border-bottom: none;
 }
 
 /* Footer */
@@ -635,6 +742,37 @@ footer nav ul li {
 }
 #course-view .section td.left {
     width: 1.5em;
+}
+.environmenttable .error,
+.environmenttable .warn {
+    padding: 3px;
+}
+.environmenttable .error {
+    background-color: #FFCCCC;
+    color: #700038;
+}
+.error {
+    color: red;
+}
+.environmenttable .warn {
+    background-color: #FFD991;
+}
+.phpinfo .e {
+    background-color: #CCCCFF;
+}
+.phpinfo .h {
+    background-color: #9999CC;
+}
+.phpinfo .v {
+    background-color: #DDDDDD;
+}
+.phpinfo .e,
+.phpinfo .h,
+.phpinfo .v,
+.environmenttable td {
+    border: 1px solid #000000;
+    font-size: 95%;
+    vertical-align: baseline;
 }
 
 /* ==========================================================================
@@ -741,6 +879,11 @@ footer nav ul li {
     *zoom: 1;
 }
 
+#printcopyright {
+    display: none;
+    text-align: center;
+}
+
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    Theses examples override the primary ('mobile first') styles.
@@ -764,7 +907,7 @@ footer nav ul li {
     }
     .loginbox input#username,
     .loginbox input#password {
-        width: 95%;
+        width: 100%;
     }
     .editbutton table {
         float: none;
@@ -781,6 +924,58 @@ footer nav ul li {
         margin: 0.2em 0;
         width: 95%;
     }
+    .tabtree {
+        width: 100%;
+    }
+    ul.tabrow0,
+    ul.tabrow0 ul {
+        list-style: none outside none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    ul.tabrow0 li,
+    ul.tabrow0 ul li {
+        background: #EEEEEE;
+        background: -moz-linear-gradient(top, #EEEEEE 0%, #DDDDDD 50%, #EEEEEE 100%);
+        background: -o-linear-gradient(top, #EEEEEE 0%, #DDDDDD 50%, #EEEEEE 100%);
+        background: -webkit-linear-gradient(top, #EEEEEE 0%, #DDDDDD 50%, #EEEEEE 100%);
+        background: linear-gradient(top, #EEEEEE 0%, #DDDDDD 50%, #EEEEEE 100%);
+        border-top: 1px solid #9A9A9A;
+        display: block;
+        line-height: 3em;
+        margin: 0;
+    }
+    ul.tabrow0 li.here a {
+        color: #000000;
+    }
+    ul.tabrow0 li.here a:hover {
+        text-decoration: none;
+    }
+    ul.tabrow0 li.last,
+    ul.tabrow0 ul li.last {
+        border-top: 1px solid #9A9A9A;
+        border-bottom: 1px solid #9A9A9A;
+    }
+    ul.tabrow0 a {
+        border: none;
+    }
+    ul.tabrow0 .empty {
+        height: 1px;
+        overflow: hidden;
+        padding: 0;
+    }
+    ul.tabrow0 div {
+        border-top: none;
+        position: absolute;
+        top: 1.5em;
+        width: 90%;
+    }
+    #mod-dialogue-view table.generaltable th.c2,
+    #mod-dialogue-view table.generaltable td.c2 {
+        display: none;
+    }
+
     footer nav { padding: 0; }
     footer nav ul li {
         border-top: 1px solid #9a9a9a;
